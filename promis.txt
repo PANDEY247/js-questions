@@ -1,0 +1,54 @@
+/Promises are used to handle asynchronous operations in JavaScript. They are easy to manage when dealing with multiple asynchronous operations where callbacks can create callback hell leading to unmanageable code. 
+// 
+// Promises are the ideal choice for handling asynchronous operations in the simplest manner. They can handle multiple asynchronous operations easily and provide better error handling than callbacks and events
+
+// Benefits of Promises 
+// Improves Code Readability
+// Better handling of asynchronous operations
+// Better flow of control definition in asynchronous logic
+// Better Error Handling
+
+// A Promise has four states: 
+// fulfilled: Action related to the promise succeeded
+// rejected: Action related to the promise failed
+// pending: Promise is still pending i.e. not fulfilled or rejected yet
+// settled: Promise has fulfilled or rejected
+
+Syntax- A promise can be constructed using a promise constructor 
+
+const promise= new promise(function (resolve,reject){
+    // code
+})
+
+
+// json - JSON is a format for storing and transporting data.
+JSON is often used when data is sent from a server to a web page.
+
+// An API is simply a medium to fetch or send data between interfaces. Let’s say you want to make an application that provides the user with some real-time data fetched from the server or maybe even allows you to modify or add data to some other endpoint. This is made possible by the API or the Application Programming Interface
+
+Async -  It simply allows us to write promises-based code as if it was synchronous and it checks that we are not breaking the execution thread. 
+
+-It operates asynchronously via the event loop. Async functions will always return a value.
+
+-It makes sure that a promise is returned and if it is not returned then JavaScript automatically wraps it in a promise which is resolved with its value.
+
+
+Ex- const getData = async() =>{
+    var data="hello world";
+    return data;
+}
+getData().then(data=> console.log(data));
+
+
+Await: Await function is used to wait for the promise. It could be used within the async block only. It makes the code wait until the promise returns a result. It only makes the async block wait.
+
+const getData = async() =>{
+    var y = await "hello world";
+    console.log(y);
+}
+
+console.log(1);
+getData();
+console.log(2);
+
+
